@@ -9,6 +9,7 @@ import ru.javawebinar.topjava.util.MealsUtil;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -21,8 +22,11 @@ import java.util.Objects;
  * User: gkislin
  * Date: 19.08.2014
  */
+@WebServlet("/mealServlet")
 public class MealServlet extends HttpServlet {
-    private static final Logger LOG = LoggerFactory.getLogger(MealServlet.class);
+	private static final long serialVersionUID = 1L;
+
+	private static final Logger LOG = LoggerFactory.getLogger(MealServlet.class);
 
     private MealRepository repository;
 
